@@ -1,0 +1,203 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body, html {
+    height: 90%; /* Ubah tinggi menjadi 100% untuk memastikan latar belakang mencakup seluruh layar */
+    margin: 0;
+}
+
+body {
+    background-image: url('g3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #ffffff;
+    padding: 8px; /* Ubah padding untuk responsifitas */
+    text-align: left;
+    position: relative;
+}
+
+/* gambar jualan styles */
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Untuk perangkat besar, gambar akan tersebar secara merata */
+    align-items: center; /* Pusatkan gambar secara vertikal */
+    height: 100%;
+}
+
+.image-frame {
+    flex-grow: 1; /* Setiap gambar akan memenuhi ruang yang tersedia */
+    max-width: 200px;
+    height: auto;
+    margin: 0 10px;
+    border: 0px solid #ccc;
+    overflow: hidden;
+}
+
+.image-frame img {
+    width: 100%;
+    max-width: 100%; /* Mengatur lebar maksimum gambar agar tidak terlalu memanjang */
+    height: auto;
+    object-fit: cover;
+}
+
+/* footer styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+/* Style untuk menu dropdown */
+.menu {
+    list-style-type: none;
+    margin: 0 auto; /* Menggeser menu ke tengah */
+    padding: 0;
+    text-align: center; /* Pusatkan teks menu */
+}
+
+.menu li {
+    display: inline-block; /* Tampilkan menu secara berdampingan */
+    position: relative;
+}
+
+.menu li a {
+    display: block; /* Setiap menu mengambil seluruh lebar */
+    padding: 10px 20px; /* Atur ulang padding */
+    text-decoration: none;
+    color: #0a5aee;
+    font-size: 18px;
+}
+
+nav {
+    text-align: center; /* Pusatkan menu */
+}
+
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff7f7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu .submenu li {
+    display: block;
+}
+
+.menu .dropdown:hover .submenu {
+    display: block;
+}
+
+.menu li a:active {
+    background-color: #0a5aee;
+    color: #fff;
+}
+
+/* Untuk layar kecil (misalnya, smartphone) */
+@media only screen and (max-width: 600px) {
+    /* Header styles */
+    header {
+        text-align: center; /* Menengahkan teks pada layar kecil */
+    }
+
+    /* gambar jualan styles */
+    .image-container {
+        flex-wrap: wrap; /* Menjadikan kontainer gambar responsif */
+    }
+
+    .image-frame {
+        max-width: 45%; /* Menyesuaikan ukuran gambar agar bisa menampilkan dua gambar dalam satu baris */
+        margin: 5px; /* Memberikan sedikit jarak antar gambar */
+    }
+
+    /* Style untuk menu dropdown */
+    .menu li {
+        display: block; /* Mengubah tampilan menu agar tampil satu per baris pada perangkat kecil */
+        position: relative;
+        text-align: center; /* Menengahkan teks menu pada perangkat kecil */
+    }
+
+    .menu li a {
+        padding: 10px 0; /* Mengubah padding agar sesuai pada perangkat kecil */
+        font-size: 16px; /* Mengubah ukuran font agar sesuai pada perangkat kecil */
+    }
+
+    nav {
+        text-align: center; /* Menengahkan menu pada perangkat kecil */
+    }
+}
+
+/* Untuk layar besar (misalnya, desktop) */
+@media only screen and (min-width: 601px) {
+    /* Header styles */
+    header {
+        text-align: center; /* Menengahkan teks pada layar besar */
+    }
+
+    /* gambar jualan styles */
+    .image-container {
+        justify-content: space-around; /* Menengahkan dan memberikan jarak antar gambar */
+    }
+
+    .image-frame {
+        max-width: 200px; /* Mengembalikan ukuran gambar menjadi seperti semula */
+        margin: 0 10px; /* Mengembalikan jarak antar gambar menjadi seperti semula */
+    }
+
+    /* Style untuk menu dropdown */
+    .menu li {
+        display: inline-block; /* Mengembalikan tampilan menu agar tampil berdampingan pada perangkat besar */
+        position: relative;
+        text-align: left; /* Mengembalikan posisi teks menu ke kiri pada perangkat besar */
+    }
+
+    .menu li a {
+        padding: 10px 20px; /* Mengembalikan padding agar sesuai pada perangkat besar */
+        font-size: 18px; /* Mengembalikan ukuran font agar sesuai pada perangkat besar */
+    }
+
+    nav {
+        text-align: right; /* Mengembalikan posisi menu ke kanan pada perangkat besar */
+    }
+}
+
+/* Background image styles */
+body {
+    background-image: url('g3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+    
+
